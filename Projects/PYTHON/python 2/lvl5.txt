@@ -1,0 +1,40 @@
+if (getY() > 20) {
+  heading(285);
+} else if (getX() > 81) {
+  heading(180);
+} else {
+  heading(180);
+}
+
+#lvl6
+
+if (noWorm()) {
+  heading(345);
+} else if (getY() < 80) {
+  heading(90);
+} else {
+  heading(180);
+}
+Are you read
+
+#lvl7
+
+if (getY() > 40) {
+  heading(240);
+} else if (noWorm()) {
+  heading(315);
+} else {
+  heading(180);
+}
+
+#lvl8
+
+if (getY() < 50 && getX() < 50) {
+  heading(45);
+} else if (noWorm()) {
+  heading(315);
+} else if (getX() > 50 && getY() < 50) {
+  heading(135);
+} else {
+  heading(45);
+}
