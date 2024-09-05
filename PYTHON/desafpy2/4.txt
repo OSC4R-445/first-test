@@ -1,0 +1,10 @@
+entradas 1
+salidas 3
+procesos 6
+condicionales 2
+
+ciclos
+
+para 1
+repetir 0
+mientras 1
