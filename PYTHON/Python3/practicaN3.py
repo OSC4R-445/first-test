@@ -1,8 +1,11 @@
 porc=0
 sueldobase=2500
 monto_vendido=float(input("Cual es el monto vendido?"))
-print("eres de tercera edad?")
-terceraedad=input().upper()
+print("cual es tu sexo?")
+sexo=input().upper()
+print("cual es tu edad?")
+edad = int(input())
+bono=0
 
 if monto_vendido>0 and monto_vendido<75000:
     porc=.05
@@ -15,12 +18,17 @@ elif monto_vendido>=1500000:
 else:
     porc=.06
 
+if (sexo=="F" and edad==55) or (sexo=="M" and edad==60):
+    bono = 40000
 porc = porc*monto_vendido
 comis = monto_vendido+porc
+salariof = monto_vendido+sueldobase+comis+bono
 
-if terceraedad=="S":
-    print("tienes un bono de tercera edad")
+
 print(f"""
-su pago es
-{monto_vendido+sueldobase+comis}
+    tiene un sueldo base de : {sueldobase}
+    su porcentaje de venta es : {porc}
+    su comision es : {comis}
+    bono de tercera edad : {bono}
+    su pago final es: {salariof}
 """)
