@@ -45,11 +45,15 @@ while True:
             price = 2
         case "3pm":
             price = 3
-        case "otras horas":
+        case "5pm":
+            price = 4
+        case "7pm":
+            price = 4
+        case "9pm":
             price = 4
         case _:
             price = 0
-            print("debes escribir 1, 2 o 3 junto con pm, o escribir ``otras horas``")
+            print("debes escribir 1, 2, 3, 5, 7 o 9, pegado a pm")
 
     #process
     if age<2 or age>70:
