@@ -1,8 +1,8 @@
 def entradas():
     nombreE= input("Cual es el nombre del empleado")
     cantA= int(input("Cuantos autos fueron vendidos"))
-    MontoV= float(input ("cuanto vendio?"))
-    return nombreE, cantA, MontoV
+    montoV= float(input ("cuanto vendio?"))
+    return nombreE, cantA, montoV
 def calcular(cantA, montoV):
     comA=300*cantA
     comV=montoV*0.18
@@ -15,6 +15,6 @@ def printdata(nombreE, comA, comV, salTotal):
     print ("Salario final: ",salTotal)
 
 #cuerpo principal
-entradas()
-calcular(cantA, montoV)
-printdata()
+nombreE, cantA, montoV = entradas()
+salTotal, comV, comA = calcular(cantA, montoV)
+printdata(nombreE, comA, comV, salTotal)
