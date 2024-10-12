@@ -41,7 +41,3 @@ def imprimir (mayor, menor, nmayor, nmenor, aprobado, reprobado, caprob, creprob
 #cuerpo principal
 nota_mayor, nota_menor, nombre_mayor, nombre_menor, aprobados, reprobados, cant_aprob, cant_reprob, cant_total=cargar()
 imprimir(nota_mayor, nota_menor, nombre_mayor, nombre_menor, aprobados, reprobados, cant_aprob, cant_reprob, cant_total)
-
-#print(f"la nota mayor es {nota_mayor}, y su nombre es {nombre_mayor}")
-#print(f"la nota menor es {nota_menor}, y su nombre es {nombre_menor}")
-#print(f"la cantidad de estudiantes aprobados es {aprobados}, la cantidad de reprobados es {reprobados}")
