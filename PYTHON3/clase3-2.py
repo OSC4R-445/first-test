@@ -14,5 +14,8 @@ def cargar():
             break
     return cant_productos, cant_precio1
 
+def imprimir (cant_productos, cant_precio1):
+    print(f"se procesar {cant_productos} de productos, de los cuales {cant_precio1} cuestan 1$")
+
 cantidad, cantidad1=cargar()
-print(f"se procesar {cantidad} de productos, de los cuales {cantidad1} cuestan 1$")
+imprimir(cantidad, cantidad1)
