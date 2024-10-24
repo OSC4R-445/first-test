@@ -23,7 +23,7 @@ def calc(monto_total_factura, iva, monto_promedio):
 def calc_menos1000(monto_total_factura, i, monto_menosDe1000, porc_monto_menosDe1000):
     if monto_total_factura<1000:
         monto_menosDe1000=monto_menosDe1000+1
-        porc_monto_menosDe1000=(monto_menosDe1000/i)
+        porc_monto_menosDe1000=(monto_menosDe1000/i) #pofavo ignore las variables inutiles :(, no tengo tiempo para re-acomodar el programa
 
     return monto_menosDe1000, porc_monto_menosDe1000
 
@@ -78,7 +78,7 @@ def sucursales(monto_promedio_sucursales, monto_total_factura_sucursales):
         monto_promedio_sucursal=monto_promedio_sucursal+monto_promedio
         
         monto_menosDe1000_sucursal=monto_menosDe1000_sucursal+monto_menosDe1000
-        porc_monto_total_factura_sucursal=(monto_menosDe1000_sucursal/4)
+        porc_monto_total_factura_sucursal=(monto_menosDe1000/i)
 
         print(f"MONTO TOTAL FACTURADO EN LA SUCURSAL {monto_total_factura_sucursal}")
         print(f"porcentage de las facturas con un monto menor a 1000 EN LA SUCURSAL: {porc_monto_total_factura_sucursal}")
@@ -87,7 +87,7 @@ def sucursales(monto_promedio_sucursales, monto_total_factura_sucursales):
     monto_promedio_sucursales, monto_total_factura_sucursales=promedio_sucursales(monto_promedio_sucursal, monto_total_factura_sucursal, monto_promedio_sucursales, monto_total_factura_sucursales)
     
     print(f"  LA FACTURACION OBTENIDA POR TODAS LAS SUCURSALES ES {monto_total_factura_sucursales}")
-    print(f"  EL MONTO OBTENIDO POR TODAS LAS SUCURSALES ES {monto_promedio_sucursales} ")
+    print(f"  EL MONTO PROMEDIO DE TODAS LAS SUCURSALES ES {monto_promedio_sucursales} ")
     print("######################PROGRAMA_END########################")
 
 sucursales(monto_promedio_sucursales, monto_total_factura_sucursales)
