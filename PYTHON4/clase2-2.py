@@ -1,5 +1,3 @@
-notas=[13,12,20,10,9,5,7]
-
 def acumular(lista):
     acumulador=0
     for i in range(len(lista)):
@@ -17,7 +15,7 @@ def contar(arreglo):
             contador=contador+1
     return contador
 
-def procentaje(conte,contg):
+def porcentaje(conte,contg):
     porc=conte/contg*100
     return porc
 
@@ -33,10 +31,20 @@ def load_dat(arreglo):
         print("ingrese el dato")
         num=int(input("Ingrese el dato"))
         arreglo[i]=num
-        
 
-#main body 
 
-acumular(notas)
+#Main body 
 
-promediar()
+notas=[13,12,20,10,9,5,7]
+notass=[0]*7
+
+suma=acumular(notas)
+
+prom=promediar(suma,notas)
+#contar no aprobados
+efes=contar(notas)
+
+porc=porcentaje(efes,notas)
+
+print_select(notas)
+
