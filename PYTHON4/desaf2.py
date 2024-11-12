@@ -1,6 +1,6 @@
-nombresVend=[""]*5
-montoVend=[0]*5
-cantFact=[0]*5
+nombresVend=[""]*2
+montoVend=[0]*2
+cantFact=[0]*2
 
 # a = int(input("cantidad de vendedores"))
 # nombresVend=[""]*a
@@ -31,7 +31,22 @@ def acumularAvg(lista): #copiado de la clase2 :)
     acumulador=acumulador/len(lista) #esto tambien pero distinto jsjsjsjs
     return acumulador
 
-def contar(arreglo): #igualito q con lo de arriba
+def data_mayor(lista):
+    aux=0
+    for i in range(len(lista)):
+        if aux<lista[i]:
+            aux=lista[i]
+    return aux
+
+def data_menor(lista):
+    aux=9**99
+    for i in range(len(lista)):
+        if aux>lista[i]:
+            aux=lista[i]
+    return aux
+
+
+def contar(arreglo):
     contador=0
     for n in arreglo:
         if n>500: #antes era n<10
@@ -48,10 +63,14 @@ def listado(arreglo,arreglon):
 nombresVend,montoVend,cantFact=dataInput(nombresVend,montoVend,cantFact)
 dataPrint(nombresVend,montoVend,cantFact)
 
+datMay=data_mayor(montoVend)
+datMen=data_menor(montoVend)
 avgVend=acumularAvg(montoVend)
 over500=contar(montoVend)
 
 print ("promedio vendido: ", avgVend)
+print ("mayor monto vendido: ", datMay)
+print ("menor monto vendido: ", datMen)
 print ("cantidad de montos sobre 500: ", over500, "\n")
-print ("lista de montos sobre 500: ")
+print ("lista de montos sobre 500:")
 listado(montoVend,nombresVend)
