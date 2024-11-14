@@ -107,8 +107,8 @@ def consultar(arreglo, arreglo2, arreglo3):
     encontro, posicion=busqueda_cedula(dato, arreglo)
     if  posicion != -1 or encontro:
         print("Ya esta registrado: ", dato," En la posicion:", posicion)
-        print("nombre: ", arreglo2[dato])
-        print("monto total: ", arreglo3[dato])
+        print("nombre: ", arreglo2[posicion])
+        print("monto total: ", arreglo3[posicion])
     else:
         print("No esta registrado")
 
