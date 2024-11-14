@@ -164,7 +164,7 @@ while True:
         case "5":
             print("|"*5,"CANTIDAD DE MONTOS SOBRE 500","|"*5)
             over500=contar(montoVend)
-            print ("cantidad de montos sobre 500: ", over500, "\n")
+            print ("cantidad de montos sobre 500: ", over500)
             print ("lista de montos sobre 500:")
             listado(montoVend,nombresVend)
             print("*"*20)
