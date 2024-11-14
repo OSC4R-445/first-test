@@ -100,13 +100,15 @@ def buscar_for(dato, arreglo):
             out=dato
     return encontro, out
 
-def consultar(arreglo):
+def consultar(arreglo, arreglo2, arreglo3):
     print("Modulo para consultar vendedor")
     print("Ingresa el numero de cedula que desea buscar")
     dato=input()
     encontro, posicion=busqueda_cedula(dato, arreglo)
     if  posicion != -1 or encontro:
         print("Ya esta registrado: ", dato," En la posicion:", posicion)
+        print("nombre: ", arreglo2[dato])
+        print("monto total: ", arreglo3[dato])
     else:
         print("No esta registrado")
 
@@ -171,7 +173,7 @@ while True:
 
         case "6":
             print("|"*5,"CONSULTAR VENDEDOR","|"*5)
-            consultar(cedula)
+            consultar(cedula,nombresVend,montoVend)
             print("*"*20)
 
         case "7":
