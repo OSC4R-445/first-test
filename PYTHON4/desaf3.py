@@ -30,19 +30,21 @@ def acumular_y_Avg(lista): #copiado de la clase2 :)
     acumulador=acumulador1/len(lista) #esto tambien pero distinto jsjsjsjs
     return acumulador, acumulador1
 
-def data_mayor(lista):
+def data_mayor(lista, lista2):
     aux=-1
     for i in range(len(lista)):
         if aux<lista[i]:
             aux=lista[i]
-    return aux
+            aux2=lista2[i]
+    return aux, aux2
 
-def data_menor(lista):
+def data_menor(lista, lista2):
     aux=9**99
     for i in range(len(lista)):
         if aux>lista[i]:
             aux=lista[i]
-    return aux
+            aux2=lista2[i]
+    return aux, aux2
 
 def burbuja_algorithmx5(arreglo,arreglo2,arreglo3,arreglo4,arreglo5):
     for i in range(len(arreglo)):
@@ -157,10 +159,10 @@ while True:
 
         case "4":
             print("|"*5,"MONTO MENOR Y MAYOR","|"*5)
-            datMay=data_mayor(montoVend)
-            datMen=data_menor(montoVend)
-            print ("mayor monto vendido: ", datMay)
-            print ("menor monto vendido: ", datMen)
+            datMay,nomMay=data_mayor(montoVend, nombresVend)
+            datMen,nomMen=data_menor(montoVend, nombresVend)
+            print ("mayor monto vendido: ", nomMay, datMay)
+            print ("menor monto vendido: ", nomMen, datMen)
             print("*"*20)
 
         case "5":
