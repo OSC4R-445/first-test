@@ -19,14 +19,14 @@ def validar_positivo(msj):
         
 def validar_digito_num(msj):
     num=-1
-    while not num>0: #while True sirve (los ciclos se rompen con return siempre)
+    while not num>0: # "while True" sirve Igual y asi no hace falta "num=-1" (los ciclos se rompen con "return" siempre)
         print(msj)
         dato=input()
         if dato.isdigit():
             print("contiene solo numeros")
             dato=int(dato)
             if dato>15 and dato<56: #edad
-                return dato
+                return dato # el ciclo se rompe con "return"
             else:
                 ("debe estar entre 16 y 55")
         else:
