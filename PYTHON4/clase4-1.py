@@ -22,7 +22,7 @@ def imprimir(arreglo, nombre_arreglo):
     for i in range(len(arreglo)):
         print(arreglo[i])
 
-#Cuerpo principal
+# Main Body
 edades=[]
 cargar(edades)
 imprimir(edades, "Edades")
