@@ -21,3 +21,8 @@ def imprimir(arreglo, nombre, nombre_arreglo):
     print(f"Datos del arreglo {nombre_arreglo}")
     for i in range(len(arreglo)):
         print(arreglo[i])
+
+#Cuerpo principal
+edades=[]
+cargar(edades)
+imprimir(edades, "Edades")
