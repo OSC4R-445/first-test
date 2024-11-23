@@ -1,6 +1,6 @@
 def validar_positivo(msj):
     num=-1
-    while not num>1:
+    while not num>0:
         print(msj)
         num=int(input())
         if not num>1:
