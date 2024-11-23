@@ -2,8 +2,8 @@ def cargar_string(msj, min, max):
     while True:
         print(msj)
         dato=input()
-        if not (len(dato)>=min and len(dato)<=max):
-            print("no cumple con la longitud establecida")
+        if not (len(dato)>=min and len(dato)<=max and dato.isalpha()):
+            print("no cumple con los requerimientos")
         else:
             return dato
 
@@ -16,6 +16,21 @@ def validar_positivo(msj):
             print("El numbreo debe ser positivo")
         else:
             return num
+        
+def validar_digito_num(msj):
+    num=-1
+    while not num>0: #while True sirve (los ciclos se rompen con return siempre)
+        print(msj)
+        dato=input()
+        if dato.isdigit():
+            print("contiene solo numeros")
+            dato=int(dato)
+            if dato>15 and dato<56: #edad
+                return dato
+            else:
+                ("debe estar entre 16 y 55")
+        else:
+            print("debe ingresar solo numeros")
 
 def buscar(dato, arreglo):
     find=False
@@ -30,7 +45,7 @@ def cargar(arreglo1, arreglo2):
     print("carga de datos")
     while True:
         nombre=cargar_string("Ingrese el nombre", 2, 12)
-        ci=validar_positivo("Ingrese la cedula")
+        ci=validar_digitos("Ingrese la cedula")
         existe=buscar(ci,arreglo2)
 
         if existe:
@@ -66,7 +81,9 @@ def validar_digitos(msj):
 # Main body
 nombres=[]
 cedulas=[]
+edades=[] #desde los 16 hasta los 55
 
+numerito=validar_digito_num("Ingresa edad")
 cargar(nombres, cedulas)
 imprimir(nombres,"Nombres",cedulas,"Cedulas")
 # imprimir(nombres, "Nombres")
