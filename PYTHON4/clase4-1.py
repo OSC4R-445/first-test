@@ -3,7 +3,7 @@ def validar_positivo(msj):
     while not num>0:
         print(msj)
         num=int(input())
-        if not num>1:
+        if not num>0:
             print("El numbreo debe ser positivo")
         else:
             return num
