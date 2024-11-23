@@ -17,7 +17,7 @@ def cargar(arreglo):
         if resp== " ":
             break
 
-def imprimir(arreglo, nombre, nombre_arreglo):
+def imprimir(arreglo, nombre_arreglo):
     print(f"Datos del arreglo {nombre_arreglo}")
     for i in range(len(arreglo)):
         print(arreglo[i])
