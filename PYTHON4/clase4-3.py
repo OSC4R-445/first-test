@@ -49,6 +49,11 @@ def imprimir(arreglo, nombre_arreglo, arreglo2, nombre_arreglo2):
     for i in range(len(arreglo)):
         print(f"{arreglo[i]} -> {arreglo2[i]}")
 
+# def imprimir(arreglo, nombre_arreglo):
+#     print(f"Datos a mostrar: {nombre_arreglo}")
+#     for i in range(len(arreglo)):
+#         print(f"{arreglo[i]}")
+
 def validar_digitos(msj):
     while True:
         print(msj)
@@ -63,4 +68,6 @@ nombres=[]
 cedulas=[]
 
 cargar(nombres, cedulas)
-imprimir(nombres, "Nombres", cedulas, "Cedulas")
+imprimir(nombres,"Nombres",cedulas,"Cedulas")
+# imprimir(nombres, "Nombres")
+# imprimir(cedulas, "Cedulas")
