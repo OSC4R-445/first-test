@@ -1,2 +1,1 @@
-USA BAJO DISCRECION  
-ok?
+Must resist IA assist
